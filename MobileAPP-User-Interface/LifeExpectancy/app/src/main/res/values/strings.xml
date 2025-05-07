@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">LifeExpectancy</string>
+    <string name="entering">Reading Life with Data\n Life Expectancy Estimation</string>
+
+</resources>

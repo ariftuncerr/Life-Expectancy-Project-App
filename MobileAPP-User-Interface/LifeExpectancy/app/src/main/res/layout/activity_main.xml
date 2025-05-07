@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="0dp"
+    android:backgroundTint="@color/material_dynamic_neutral_variant99"
+    tools:context=".MainActivity">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="206dp"
+        android:layout_height="172dp"
+        android:layout_marginTop="25dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/life" />
+
+    <TextView
+        android:id="@+id/txtEntering"
+        android:layout_width="wrap_content"
+        android:layout_height="56dp"
+        android:layout_marginTop="16dp"
+        android:autoText="false"
+        android:gravity="center"
+        android:text="@string/entering"
+        android:textColor="@color/blue3"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintStart_toStartOf="@+id/imageView2"
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ScrollView
+        android:layout_width="360dp"
+        android:layout_height="468dp"
+        android:background="@drawable/rounded_border"
+        android:backgroundTint="@color/material_dynamic_neutral_variant100"
+        android:backgroundTintMode="src_in"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtEntering">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#A9A9A9"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/countryLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Select Country"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/selectCountry"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/inputYear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/textYear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint=" Enter the year (e.g., 2015)"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputSelectStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:hint="Select Status"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:endIconMode="dropdown_menu">
+
+                <AutoCompleteTextView
+                    android:id="@+id/textSelectStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputAdultMortality"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/textAdultMortality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Death rate per 1,000 people"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputInfantDeaths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/textInfantDeaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Infant deaths per 1,000 births"
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputAlcohol"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textAlcohol"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Annual alcohol consumption (litres per person)"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="12sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputPercentageExpenditure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textPercentageExpenditure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of GDP spent on health"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputHepatitisB"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textHepatitisB"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of 1-year-olds vaccinated for Hep B"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputMeasles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textMeasles"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Reported measles cases"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputBmi"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:imeOptions="actionNext"
+                    android:inputType="number|numberDecimal"
+                    android:id="@+id/textBmi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Average Body Mass Index"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputUnderFiveDeaths"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textUnderFiveDeaths"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Deaths under age 5."
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputPolio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textPolio"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of children vaccinated for Polio"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputTotalExpenditure"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textTotalExpenditure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of total government budget spent on health"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputDiphtheria"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/textDiphtheria"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of children vaccinated for DPT"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputHivAids"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textHivAids"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="HIV/AIDS death rate per 1,000"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputGdp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textGdp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Gross Domestic Product (USD)"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number|numberDecimal"
+                android:id="@+id/inputPopulation"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textPopulation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Total population in that year"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputThinness1_19Years"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textThinness1_19Years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of underweight people aged 1–19"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputThinness5_9Years"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+
+                    android:id="@+id/textThinness5_9Years"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="% of underweight children aged 5–9"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputIncomeCOR"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textIncomeCOR"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="(0–1) for access to income/resources"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/inputSchooling"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:boxBackgroundMode="outline"
+                app:boxCornerRadiusBottomEnd="12dp"
+                app:boxCornerRadiusBottomStart="12dp"
+                app:boxCornerRadiusTopEnd="12dp"
+                app:boxCornerRadiusTopStart="12dp"
+                app:boxStrokeColor="#0B2E33"
+                app:endIconDrawable="@drawable/baseline_question_mark_24"
+                app:endIconMode="custom"
+                app:hintTextColor="@color/blue2">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/textSchooling"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/rounded_border"
+                    android:backgroundTint="@color/material_dynamic_neutral90"
+                    android:hint="Average years of schooling for adults"
+                    android:inputType="text"
+                    android:textColor="#0B2E33"
+                    android:textColorHint="@color/black"
+                    android:textSize="14sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:onClick="onPredictClick"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:id="@+id/btnSubmit"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:layout_margin="16dp"
+                android:text="Predict Life Expectancy Time"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:backgroundTint="@color/blue3"
+                app:cornerRadius="16dp"
+                app:icon="@drawable/predict1"
+                app:iconPadding="8dp"
+                app:iconTint="@android:color/white"
+                app:strokeWidth="0dp" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
