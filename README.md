@@ -34,7 +34,10 @@ Technologies: Python, Pandas, Scikit-learn, Flask, Android (Kotlin)
 
 ## 🖼️ Screenshots
 
-(Add screenshots from the mobile app here.)
+<p align="center">
+  <img src="Screenshot_1.png" alt="ss 1" width="45%" />
+  <img src="Screenshot_2.png" alt="ss 2" width="45%" />
+</p>
 
 ---
 
