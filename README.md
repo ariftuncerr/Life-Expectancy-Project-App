@@ -9,7 +9,7 @@ Technologies: Python, Pandas, Scikit-learn, Flask, Android (Kotlin)
 ## 🚀 Project Features
 
 - ✅ **Machine Learning Model**:  
-  - Algorithm used: `Random Forest Regressor`  
+  - Algorithm used: `Random Forest Regressor`  `Lineer Regression` `Decision Trees`
   - Dataset: [WHO Life Expectancy Dataset](https://www.kaggle.com/datasets/kumarajarshi/life-expectancy-who)  
   - Includes data preprocessing, hyperparameter optimization, and model evaluation steps.
 
@@ -27,8 +27,8 @@ Technologies: Python, Pandas, Scikit-learn, Flask, Android (Kotlin)
 |----------|--------------|
 | Machine Learning | Python, Pandas, Scikit-Learn, RandomForest |
 | Backend | Flask, ngrok (for public testing) |
-| Mobile App | Kotlin, Retrofit, MVVM, Android XML |
-| Development | Google Colab, Android Studio |
+| Mobile App | Kotlin, Retrofit, MVVM, Android XML, Coroutine |
+| Development | Google Colab, Android Studio, Visual Studio Code |
 
 ---
 
