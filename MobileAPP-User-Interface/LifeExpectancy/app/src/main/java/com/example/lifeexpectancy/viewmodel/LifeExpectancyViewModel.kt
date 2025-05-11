@@ -20,13 +20,13 @@ class LifeExpectancyViewModel : ViewModel() {
     fun sendPredictionRequest(data: LifeExpectancyModel) {
         Log.d("POST_JSON", Gson().toJson(data))  // GÖNDERİLEN VERİ
 
+
         viewModelScope.launch {
             try {
                 val response = repository.predict(data)
 
                 if (response.isSuccessful) {
                     _prediction.value = response.body()?.prediction
-
                 } else {
                     Log.e("API_ERROR", "Error: ${response.code()}")
                 }

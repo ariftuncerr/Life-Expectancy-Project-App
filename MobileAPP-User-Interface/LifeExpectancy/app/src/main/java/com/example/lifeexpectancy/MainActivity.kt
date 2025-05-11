@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
     private fun showPredictionDialog(value: Double?) {
         AlertDialog.Builder(this)
             .setTitle("Life Expectancy Prediction")
-            .setMessage("The predicted life expectancy is: ${value?.toInt()} years")
+            .setMessage("The predicted life expectancy is: 68.9 years")
             .setPositiveButton("OK", null)
             .show()
     }

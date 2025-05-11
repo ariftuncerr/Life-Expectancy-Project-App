@@ -20,13 +20,13 @@ data class LifeExpectancyModel(
     val hepatitisB: Int,
 
     @SerializedName("Measles ")
-    val measles: Int,
+    val measles: Int,  // sonunda boşluk var
 
     @SerializedName(" BMI ")
-    val bmi: Double,
+    val bmi: Double,   // başında ve sonunda boşluk var
 
     @SerializedName("under-five deaths ")
-    val underFiveDeaths: Int,
+    val underFiveDeaths: Int,  // sonunda boşluk var
 
     val Polio: Int,
 
@@ -34,10 +34,10 @@ data class LifeExpectancyModel(
     val totalExpenditure: Double,
 
     @SerializedName("Diphtheria ")
-    val diphtheria: Int,
+    val diphtheria: Int,  // sonunda boşluk var
 
     @SerializedName(" HIV/AIDS")
-    val hivAids: Double,
+    val hivAids: Double,  // başında boşluk var
 
     val GDP: Double,
     val Population: Int,
@@ -56,6 +56,7 @@ data class LifeExpectancyModel(
     @SerializedName("Status_Developing")
     val statusDeveloping: Int
 )
+
 data class PredictResponse(
-    val prediction : Double
+    val prediction: Double
 )
